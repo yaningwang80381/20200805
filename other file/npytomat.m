@@ -1,6 +1,6 @@
 %% please use the loop if there are more than one test data
-%for i = 1:52
-filename = strcat('C:\Users\ThinkPad\Downloads\0501_1\',num2str(i),'.npy');
+for i = 1:9
+filename = strcat('C:\Users\Downloads\',num2str(i),'.npy');
 
 [arrayShape, dataType, fortranOrder, littleEndian, totalHeaderLength, npyVersion] = readNPYheader(filename);
 
@@ -15,4 +15,4 @@ else
     img = reshape(img,[256,256]);
     imshow(img,[])%
 end
-%end
+end
